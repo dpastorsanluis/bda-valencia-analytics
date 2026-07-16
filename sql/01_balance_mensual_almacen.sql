@@ -21,5 +21,3 @@ round(e.'kg aprovechados'-coalesce(r.'kg repartidos',0),1) as 'balance total'
 from entradas e
 left join repartos r on e.anyo_mes=r.anyo_mes
 order by e.anyo_mes asc;
-
-	
