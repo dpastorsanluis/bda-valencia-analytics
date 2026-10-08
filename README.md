@@ -2,7 +2,7 @@
 
 Análisis de la operativa de un banco de alimentos: entradas de producto, mermas, repartos a entidades y donaciones económicas. Proyecto de práctica en SQL y Power BI.
 
-> **Sobre los datos:** el dataset es **sintético** (datos ficticios, periodo 2024–2025). Está inspirado en la operativa del Banco de Alimentos de Valencia que conocí en un proyecto de 180 Degrees Consulting, pero **no contiene datos reales** de la entidad ni de sus donantes.
+> **Sobre los datos:** el dataset es **sintético**: lo creé yo con datos ficticios (periodo 2024–2025) para simular la operativa real. Está inspirado en la operativa del Banco de Alimentos de Valencia que conocí en un proyecto de 180 Degrees Consulting, pero **no contiene datos reales** de la entidad ni de sus donantes.
 
 ---
 
@@ -52,16 +52,21 @@ bda-valencia-analytics/
 
 ## Dashboard de Power BI
 
-Dos páginas, con medidas DAX propias (`Total Recibido`, `% Merma`, `Total Económico`, `Meses Cubiertos`, `Tiempo Medio Almacén`):
+Dos páginas, con medidas DAX propias (`Total Recibido`, `% Merma`, `Total Económico`, `Meses Cubiertos`, `Tiempo Medio Almacén`).
 
-- **Resumen operativo:** indicadores principales, evolución mensual de kilos, repartos por municipio en mapa y peso de los donantes recurrentes.
-- **Mermas y logística:** % de merma por categoría, perecederos frente a no perecederos y tiempo medio en almacén.
+**Resumen operativo:** kilos repartidos por municipio en mapa, total de donaciones económicas y meses de gastos fijos que cubren, evolución mensual de kilos recibidos y % de merma, y peso de las donaciones recurrentes.
+
+![Resumen operativo](capturas/resumen_operativo.png)
+
+**Mermas y logística:** % de merma por categoría (perecedero o no), kilos recibidos por donante y tiempo medio en almacén.
+
+![Mermas y logística](capturas/mermas_logistica.png)
 
 ## Principales resultados (sobre el dataset sintético)
 
 - Merma global del **4,9 %** de los kilos recibidos.
 - **3 categorías en alerta crítica** (pan y bollería, frutas y verduras, platos preparados) y **3 en atención** (pescado, carne y aves, lácteos refrigerados): todas perecederas.
-- Tiempo medio en almacén de **11,1 días**.
+- Tiempo medio en almacén de **11,1 días**: los perecederos salen en unos 3 días y los no perecederos tardan unos 17.
 - Las donaciones económicas suman de media **13.935 €/mes**, pero solo **10 de los 24 meses** superan los 13.000 € de gastos fijos: los ingresos son muy estacionales.
 - De 60 entidades, 4 son grandes (≥ 500 personas), 20 medianas y 36 pequeñas.
 
